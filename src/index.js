@@ -4,9 +4,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import reportWebVitals from './reportWebVitals';
-import UserApp from './user/userApp';
-import User from './ReduxToolkit/user';
-import App from './ReduxToolkit/App';
 import { Provider } from 'react-redux';
 import Project from './Project1/Project';
 import store from './Project1/redux/store';
