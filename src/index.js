@@ -4,17 +4,21 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import reportWebVitals from './reportWebVitals';
-import { Provider } from 'react-redux';
-import Project from './Project1/Project';
-import store from './Project1/redux/store';
-
+import Application from './Application';
+import ProductProvider from './context/ProductContext';
+import SideBarProvider from './context/SideBarContext';
+import CartProvider from './context/CartContext';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-        <Provider store={store}>
-                <Project />
-        </Provider>     
+  <SideBarProvider>
+    <CartProvider>
+      <ProductProvider>
+        <Application />
+      </ProductProvider>
+    </CartProvider>
+  </SideBarProvider>
 );  
 
 // If you want to start measuring performance in your app, pass a function
